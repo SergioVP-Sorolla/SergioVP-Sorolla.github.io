@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <!--
+    Título de la página (actualizado por JS según el idioma).
+    El atributo `data-i18n-title` se usa para localizar el título desde el objeto `translations`.
+  -->
+  <title data-i18n-title="page.title">Portafolio de Sergio Vivó Pla</title>
+  <link rel="stylesheet" href="Estilo.css" />
+  <!-- Font Awesome para íconos (decorativo) -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- Capa de fondo animado -->
+  <div class="bg-gradient"></div>
+  <div class="bg-orb bg-orb-1"></div>
+  <div class="bg-orb bg-orb-2"></div>
+
+  <!-- HEADER con logo integrado y menú -->
+  <header class="main-header">
+    <a href="#inicio" class="brand">
+      <div class="brand-logo-circle">
+        <img src="Fotos/Logo S.png" alt="Logo S" class="brand-logo-img" />
+      </div>
+      <div class="brand-text">
+        <span class="brand-name">Sergio Vivó Pla</span>
+        <span class="brand-role" data-i18n="brand.role">Estudiante de Grado Superior del modulo de ASIR</span>
+      </div>
+    </a>
+
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a></li>
+        <li><a href="#proyectos" data-i18n="nav.projects">Proyectos</a></li>
+        <li><a href="#habilidades" data-i18n="nav.skills">Habilidades</a></li>
+        <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="lang-selector">
+      <button class="lang-btn lang-btn-active" data-lang="es" aria-label="Español">ES</button>
+      <button class="lang-btn" data-lang="en" aria-label="English">EN</button>
+    </div>
+  </header>
+
+  <!-- HERO centrado con logo grande, nombre y frase -->
+  <section id="inicio" class="hero">
+    <div class="hero-inner hero-inner-centered">
+      <!-- Hero: logo y frase principal -->
+      <!-- Este bloque muestra el logo grande y la frase de presentación. -->
+      <div class="hero-logo-big">
+        <div class="hero-logo-circle">
+          <img src="Fotos/Logo S.png" alt="Logo S" />
+        </div>
+      </div>
+      <h1 class="hero-name">Sergio Vivó Pla</h1>
+      <p class="hero-tagline" data-i18n="hero.tagline">
+        Estudiante de Grado Superior del modulo de ASIR
+      </p>
+    </div>
+  </section>
+
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="section sobre-mi-section">
+    <div class="section-header">
+      <p class="section-eyebrow" data-i18n="section.who">Quién soy</p>
+      <h2 data-i18n="section.about">Sobre mí</h2>
+    </div>
+
+    <div class="sobre-mi-layout">
+      <div class="sobre-mi-card glass-card animate-in">
+        <h3 data-i18n="about.hello">Hola, soy Sergio</h3>
+        <!-- Mostrar ambas versiones: Español e Inglés -->
+        <div class="about-bilingual">
+          <p class="about-es" data-i18n-static="about.desc1" data-lang="es"></p>
+          <p class="about-en" data-i18n-static="about.desc1" data-lang="en"></p>
+        </div>
+        <div class="about-bilingual">
+          <p class="about-es" data-i18n-static="about.desc2" data-lang="es"></p>
+          <p class="about-en" data-i18n-static="about.desc2" data-lang="en"></p>
+        </div>
+      </div>
+      <div class="sobre-mi-side">
+        <div class="tag-list">
+          <span class="tag" data-i18n="tag.html5">HTML5</span>
+          <span class="tag" data-i18n="tag.css3">CSS3</span>
+          <span class="tag" data-i18n="tag.ai">IA aplicada</span>
+          <span class="tag" data-i18n="tag.hardware">Hardware</span>
+        </div>
+        <div class="social-links">
+          <a
+            href="#"
+            class="social-link social-instagram"
+            aria-label="Instagram"
+            target="_blank"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a
+            href="#"
+            class="social-link social-x"
+            aria-label="X (Twitter)"
+            target="_blank"
+          >
+            <i class="fab fa-x-twitter"></i>
+          </a>
+          <a
+            href="#"
+            class="social-link social-linkedin"
+            aria-label="LinkedIn"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="#"
+            class="social-link social-github"
+            aria-label="GitHub"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="section proyectos-section">
+    <div class="section-header">
+      <p class="section-eyebrow" data-i18n="section.built">Lo que he construido</p>
+      <h2 data-i18n="section.projects">Proyectos</h2>
+    </div>
+
+    <div class="proyectos-grid">
+      <article class="proyecto-card animate-in">
+        <div class="proyecto-img-wrapper">
+          <img class="previewable" data-full="Fotos/Hackathon Incibe 2025.png" src="Fotos/Hackathon Incibe 2025.png" alt="Hackathon de Ciberseguridad" />
+          <button class="img-zoom-btn" aria-label="Ver en grande">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 21L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="proyecto-content">
+          <h3 data-i18n="project.hackathon.title">Participación en el Hackathon de Incibe 2025</h3>
+          <p data-i18n="project.hackathon.desc">
+            Un proyecto para impulsar la industria de la Ciberseguridad en España.
+          </p>
+          <span class="pill" data-i18n="pill.cybersecurity">Ciberseguridad</span>
+          <span class="pill" data-i18n="pill.hackathon">Hackathon</span>
+        </div>
+      </article>
+
+      <article class="proyecto-card animate-in">
+        <div class="proyecto-img-wrapper">
+          <img class="previewable" data-full="PDF/Proyecto ABP.pdf" src="Fotos/Proyecto ABP.png" alt="Proyecto ABP" />
+          <button class="img-zoom-btn" aria-label="Ver en grande">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 21L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="proyecto-content">
+          <h3 data-i18n="project.abp.title">Poyecto ABP</h3>
+          <p data-i18n="project.abp.desc">
+            Proyecto ABP 1º ASIR: Creación de una Cooperativa.
+          </p>
+          <span class="pill" data-i18n="pill.network_scheme">Esquema de Red</span>
+          <span class="pill" data-i18n="pill.database">Base de Datos</span>
+          <span class="pill" data-i18n="pill.webpage">Página Web</span>
+        </div>
+      </article>
+
+      <article class="proyecto-card animate-in">
+        <div class="proyecto-img-wrapper">
+          <img class="previewable" data-full="PDF/Proyecto PAR.pdf" src="Fotos/Proyecto PAR.png" alt="Proyecto PAR" />
+          <button class="img-zoom-btn" aria-label="Ver en grande">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 21L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="proyecto-content">
+          <h3 data-i18n="project.par.title">Proyecto PAR</h3>
+          <p data-i18n="project.par.desc">
+            Creación de una red con 4 subredes para la conexión entre edificios y plantas
+          </p>
+          <span class="pill" data-i18n="pill.networks">Redes</span>
+          <span class="pill" data-i18n="pill.cisco">Cisco Packet Tracer</span>
+          <span class="pill" data-i18n="pill.par">PAR</span>
+        </div>
+      </article>
+
+      <article class="proyecto-card animate-in">
+        <div class="proyecto-img-wrapper">
+          <img class="previewable" data-full="PDF/Proyecto ISO Implementación Active Directory.pdf" src="Fotos/Implementación Active Directory.png" alt="Proyecto ISO" />
+          <button class="img-zoom-btn" aria-label="Ver en grande">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 21L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="proyecto-content">
+          <h3 data-i18n="project.iso.title">Proyecto ISO</h3>
+          <p data-i18n="project.iso.desc">
+           Implementación Active Directory y políticas de grupo en un entorno Windows Server.
+          </p>
+          <span class="pill" data-i18n="pill.windows_server">Windows Server</span>
+          <span class="pill" data-i18n="pill.active_directory">Active Directory</span>
+        </div>
+      </article>
+
+      <article class="proyecto-card animate-in">
+        <div class="proyecto-img-wrapper">
+          <img class="previewable" data-full="PDF/Programación asistida con Github Copilot.pdf" src="Fotos/Programación asistida con Github Copilot.png" alt="Programación asistida" />
+          <button class="img-zoom-btn" aria-label="Ver en grande">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 21L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="proyecto-content">
+          <h3 data-i18n="project.copilot.title">Programación asistida con Github Copilot</h3>
+          <p data-i18n="project.copilot.desc">Programación con IA asistida mediante Github Copilot.</p>
+          <span class="pill" data-i18n="pill.ai_label">IA</span>
+          <span class="pill" data-i18n="pill.github">Github</span>
+          <span class="pill" data-i18n="pill.copilot">Copilot</span>
+        </div>
+      </article>
+
+      <article class="proyecto-card animate-in">
+        <div class="proyecto-img-wrapper">
+          <img class="previewable" data-full="PDF/Proyecto Intermódulos .pdf" src="Fotos/Proyecto Intermódulos.png" alt="Proyecto Intermódulos" onerror="this.onerror=null;this.src='../Portafolio Web (HTML + CSS + IA)/Fotos/REA.png'" />
+          <button class="img-zoom-btn" aria-label="Ver en grande">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 21L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <div class="proyecto-content">
+          <h3 data-i18n="project.intermodulos.title">Proyecto Intermódulos</h3>
+          <p data-i18n="project.intermodulos.desc">
+            Proyecto sobre investigación sobre la REA
+          </p>
+          <span class="pill" data-i18n="pill.rea">REA</span>
+          <span class="pill" data-i18n="pill.research">Investigación</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- HABILIDADES -->
+  <section id="habilidades" class="section habilidades-section">
+    <div class="section-header">
+      <p class="section-eyebrow" data-i18n="section.manage">Lo que manejo</p>
+      <h2 data-i18n="section.skills">Habilidades y Conocimientos</h2>
+    </div>
+
+    <!--
+      Sección de habilidades: cada tarjeta `.habilidad` muestra una habilidad
+      y una barra de progreso. Las traducciones se manejan con `data-i18n`.
+      La clase `animate-in` indica que el elemento debe animarse al entrar en pantalla.
+    -->
+
+    <div class="habilidades-grid">
+      <div class="habilidad glass-card animate-in">
+        <div class="habilidad-header">
+          <h3 data-i18n="skill.html">HTML</h3>
+          <span>95%</span>
+        </div>
+        <p data-i18n="skill.html.desc">
+          Estructura semántica, formularios, etiquetas accesibles y buenas prácticas.
+        </p>
+        <div class="barra-progreso">
+          <div class="progreso" style="--p: 95%"></div>
+        </div>
+      </div>
+
+      <div class="habilidad glass-card animate-in">
+        <div class="habilidad-header">
+          <h3 data-i18n="skill.css">CSS</h3>
+          <span>65%</span>
+        </div>
+        <p data-i18n="skill.css.desc">
+          Animaciones, variables y responsive.
+        </p>
+        <div class="barra-progreso">
+          <div class="progreso" style="--p: 65%"></div>
+        </div>
+      </div>
+
+      <div class="habilidad glass-card animate-in">
+        <div class="habilidad-header">
+          <h3 data-i18n="skill.hardware">Montaje de equipos</h3>
+          <span>75%</span>
+        </div>
+        <p data-i18n="skill.hardware.desc">Montaje y desmontaje de equipos, mantenimiento y limpieza.</p>
+        <div class="barra-progreso">
+          <div class="progreso" style="--p: 75%"></div>
+        </div>
+      </div>
+
+      <div class="habilidad glass-card animate-in">
+        <div class="habilidad-header">
+          <h3 data-i18n="skill.ai">IA aplicada</h3>
+          <span>85%</span>
+        </div>
+        <p data-i18n="skill.ai.desc">Uso de IA para generar código, ideas de diseño y optimizar flujos de trabajo.</p>
+        <div class="barra-progreso">
+          <div class="progreso" style="--p: 85%"></div>
+        </div>
+      </div>
+
+      <div class="habilidad glass-card animate-in">
+        <div class="habilidad-header">
+          <h3 data-i18n="skill.microsoft">Microsoft 365</h3>
+          <span>80%</span>
+        </div>
+        <p data-i18n="skill.microsoft.desc">Uso de Office y servicios de Microsoft.</p>
+        <div class="barra-progreso">
+          <div class="progreso" style="--p: 80%"></div>
+        </div>
+      </div>
+
+      <div class="habilidad glass-card animate-in">
+        <div class="habilidad-header">
+          <h3 data-i18n="skill.windows">Windows Server 2025</h3>
+          <span>90%</span>
+        </div>
+        <p data-i18n="skill.windows.desc">Implementación de servicios en Windows Server 2025.</p>
+        <div class="barra-progreso">
+          <div class="progreso" style="--p: 90%"></div>
+        </div>
+      </div>
+
+      <div class="habilidad glass-card animate-in">
+        <div class="habilidad-header">
+          <h3 data-i18n="skill.networks">Redes</h3>
+          <span>70%</span>
+        </div>
+        <p data-i18n="skill.networks.desc">
+          Configuración de redes, protocolos, seguridad y administración.
+        </p>
+        <div class="barra-progreso">
+          <div class="progreso" style="--p: 70%"></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contacto" class="section contacto-section">
+    <div class="section-header">
+      <p class="section-eyebrow" data-i18n="section.together">Trabajemos juntos</p>
+      <h2 data-i18n="section.contact">Contacto</h2>
+    </div>
+
+    <!--
+      Formulario de contacto:
+      - Validación nativa HTML5 usada (required, pattern, minlength)
+      - Mensajes traducibles mediante `data-i18n-title` y `setCustomValidity` en JS
+    -->
+
+    <p class="contacto-mensaje" data-i18n="contact.message">¿Quieres contratarme? ¡Hablemos!</p>
+
+    <form class="contacto-form glass-card" action="#" method="post">
+      <div class="form-group">
+        <label for="nombre" data-i18n="form.name">Nombre</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Tu nombre completo"
+          data-i18n-placeholder="form.name.placeholder"
+          required
+          aria-required="true"
+          pattern=".{2,}"
+          title="Por favor ingresa al menos 2 caracteres."
+          data-i18n-title="form.name.validation"
+          data-required-msg="form.required"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email" data-i18n="form.email">Correo electrónico</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="tu@email.com"
+          data-i18n-placeholder="form.email.placeholder"
+          required
+          aria-required="true"
+          data-i18n-title="form.email.validation"
+          title="Por favor ingresa un correo válido. Ejemplo: usuario@dominio.com"
+          data-required-msg="form.required"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="mensaje" data-i18n="form.message">Mensaje</label>
+        <textarea
+          id="mensaje"
+          name="mensaje"
+          rows="5"
+          placeholder="Cuéntame sobre tu proyecto o idea..."
+          data-i18n-placeholder="form.message.placeholder"
+          required
+          aria-required="true"
+          minlength="10"
+          title="Por favor ingresa al menos 10 caracteres."
+          data-i18n-title="form.message.validation"
+          data-required-msg="form.required"
+        ></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-full" data-i18n="form.send">Enviar mensaje</button>
+    </form>
+  </section>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="footer">
+    <p data-i18n="footer">© 2025 Sergio Vivó Pla</p>
+  </footer>
+
+  <!-- Lightbox / preview modal (imagen o PDF) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-overlay" data-close></div>
+    <div class="lightbox-content" role="dialog" aria-modal="true">
+      <button class="lightbox-close" aria-label="Cerrar" data-close>&times;</button>
+      <div class="lightbox-body" id="lightbox-body"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const body = document.body;
+      const lightbox = document.getElementById('lightbox');
+      const lightboxBody = document.getElementById('lightbox-body');
+
+      function openLightbox(src) {
+        // Clear previous
+        lightboxBody.innerHTML = '';
+
+        const isPdf = typeof src === 'string' && src.toLowerCase().endsWith('.pdf');
+        if (isPdf) {
+          const iframe = document.createElement('iframe');
+          iframe.src = src;
+          iframe.setAttribute('frameborder', '0');
+          iframe.setAttribute('allowfullscreen', '');
+          iframe.className = 'lightbox-iframe';
+          lightboxBody.appendChild(iframe);
+        } else {
+          const img = document.createElement('img');
+          img.src = src;
+          img.alt = '';
+          img.className = 'lightbox-img';
+          lightboxBody.appendChild(img);
+        }
+
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        body.classList.add('no-scroll');
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightboxBody.innerHTML = '';
+        body.classList.remove('no-scroll');
+      }
+
+      // Click handlers on previewable images
+      document.addEventListener('click', function (e) {
+        // If user clicked the overlay close or close button
+        if (e.target.matches('[data-close]') || e.target.closest('[data-close]')) {
+          closeLightbox();
+          return;
+        }
+
+        // If user clicked the zoom button inside the image wrapper
+        const btn = e.target.closest('.img-zoom-btn');
+        if (btn) {
+          const wrapper = btn.closest('.proyecto-img-wrapper');
+          const img = wrapper && wrapper.querySelector('img.previewable');
+          if (img) {
+            const src = img.getAttribute('data-full') || img.src;
+            openLightbox(src);
+          }
+          return;
+        }
+
+        // If user clicked directly on the image
+        const img = e.target.closest('img.previewable');
+        if (img) {
+          const src = img.getAttribute('data-full') || img.src;
+          openLightbox(src);
+          return;
+        }
+      });
+
+      // ESC to close
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+          closeLightbox();
+        }
+      });
+    })();
+  </script>
+
+  <!-- Language selector script -->
+  <script>
+    const translations = {
+      es: {
+        'nav.home': 'Inicio',
+        'nav.about': 'Sobre mí',
+        'nav.projects': 'Proyectos',
+        'nav.skills': 'Habilidades',
+        'nav.contact': 'Contacto',
+        'page.title': 'Portafolio de Sergio Vivó Pla',
+        'brand.role': 'Estudiante de Grado Superior del modulo de ASIR',
+        'hero.tagline': 'Estudiante de Grado Superior del modulo de ASIR',
+        'section.who': 'Quién soy',
+        'section.about': 'Sobre mí',
+        'section.built': 'Lo que he construido',
+        'section.projects': 'Proyectos',
+        'section.manage': 'Lo que manejo',
+        'section.skills': 'Habilidades y Conocimientos',
+        'section.together': 'Trabajemos juntos',
+        'section.contact': 'Contacto',
+        'about.hello': 'Hola, soy Sergio',
+        'about.desc1': 'Actualmente soy estudiante de Grado Superior del modulo de ASIR en el centro Sorolla Profesional en Valencia. Estoy aprendiendo conocimientos de HTML, CSS y demás. He trabajado en proyectos académicos creando portafolios y pequeñas aplicaciones web.',
+        'about.desc2': 'Me gusta diseñar páginas web, montar y desmontar equipos, aprender a usar IA y poner en práctica los conocimientos que estoy aprendiendo en el dia a dia. Busco oportunidades para crecer en equipos donde pueda aprender y aportar soluciones.',
+        'project.hackathon.title': 'Participación en el Hackathon de Incibe 2025',
+        'project.hackathon.desc': 'Un proyecto para impulsar la industria de la Ciberseguridad en España.',
+        'project.abp.title': 'Poyecto ABP',
+        'project.abp.desc': 'Proyecto ABP 1º ASIR: Creación de una Cooperativa.',
+        'project.par.title': 'Proyecto PAR',
+        'project.par.desc': 'Creación de una red con 4 subredes para la conexión entre edificios y plantas',
+        'project.iso.title': 'Proyecto ISO',
+        'project.iso.desc': 'Implementación Active Directory y políticas de grupo en un entorno Windows Server.',
+        'project.copilot.title': 'Programación asistida con Github Copilot',
+        'project.copilot.desc': 'Programación con IA asistida mediante Github Copilot.',
+        'project.intermodulos.title': 'Proyecto Intermódulos',
+        'project.intermodulos.desc': 'Proyecto sobre investigación sobre la REA',
+        'skill.html': 'HTML',
+        'skill.html.desc': 'Estructura semántica, formularios, etiquetas accesibles y buenas prácticas.',
+        'skill.css': 'CSS',
+        'skill.css.desc': 'Animaciones, variables y responsive.',
+        'skill.hardware': 'Montaje de equipos',
+        'skill.hardware.desc': 'Montaje y desmontaje de equipos, mantenimiento y limpieza.',
+        'skill.ai': 'IA aplicada',
+        'skill.ai.desc': 'Uso de IA para generar código, ideas de diseño y optimizar flujos de trabajo.',
+        'skill.windows': 'Windows Server 2025',
+        'skill.windows.desc': 'Implementación de servicios en Windows Server 2025.',
+        'skill.microsoft': 'Microsoft 365',
+        'skill.microsoft.desc': 'Uso de Office y servicios de Microsoft.',
+        'skill.networks': 'Redes',
+        'skill.networks.desc': 'Configuración de redes, protocolos, seguridad y administración.',
+        'contact.message': '¿Quieres contratarme? ¡Hablemos!',
+        'form.name': 'Nombre',
+        'form.name.placeholder': 'Tu nombre completo',
+        'form.email': 'Correo electrónico',
+        'form.email.placeholder': 'tu@email.com',
+        'form.message': 'Mensaje',
+        'form.message.placeholder': 'Cuéntame sobre tu proyecto o idea...',
+        'form.name.validation': 'Por favor ingresa al menos 2 caracteres.',
+        'form.email.validation': 'Por favor ingresa un correo válido. Ejemplo: usuario@dominio.com',
+        'form.message.validation': 'Por favor ingresa al menos 10 caracteres.',
+        'form.required': 'Este campo es requerido.',
+        'form.send': 'Enviar mensaje',
+        'footer': '© 2025 Sergio Vivó Pla',
+        'tag.html5': 'HTML5',
+        'tag.css3': 'CSS3',
+        'tag.ai': 'IA aplicada',
+        'tag.hardware': 'Hardware',
+        'pill.cybersecurity': 'Ciberseguridad',
+        'pill.hackathon': 'Hackathon',
+        'pill.network_scheme': 'Esquema de Red',
+        'pill.database': 'Base de Datos',
+        'pill.webpage': 'Página Web',
+        'pill.networks': 'Redes',
+        'pill.cisco': 'Cisco Packet Tracer',
+        'pill.par': 'PAR',
+        'pill.windows_server': 'Windows Server',
+        'pill.active_directory': 'Active Directory',
+        'pill.ai_label': 'IA',
+        'pill.github': 'Github',
+        'pill.copilot': 'Copilot',
+        'pill.rea': 'REA',
+        'pill.research': 'Investigación',
+      },
+      en: {
+        'nav.home': 'Home',
+        'nav.about': 'About',
+        'nav.projects': 'Projects',
+        'nav.skills': 'Skills',
+        'nav.contact': 'Contact',
+        'page.title': 'Sergio Vivó Pla Portfolio',
+        'brand.role': 'Advanced Vocational Student in Systems Administration',
+        'hero.tagline': 'Advanced Vocational Student in Systems Administration',
+        'section.who': 'Who am I',
+        'section.about': 'About me',
+        'section.built': 'What I have built',
+        'section.projects': 'Projects',
+        'section.manage': 'What I manage',
+        'section.skills': 'Skills and Knowledge',
+        'section.together': 'Let\'s work together',
+        'section.contact': 'Contact',
+        'about.hello': 'Hi, I\'m Sergio',
+        'about.desc1': 'I am currently a student of Advanced Vocational Studies in Systems Administration (ASIR) at the Sorolla Professional Center in Valencia. I am learning HTML, CSS and more. I have worked on academic projects creating portfolios and small web applications.',
+        'about.desc2': 'I like designing web pages, assembling and disassembling equipment, learning to use AI and putting into practice the knowledge I am learning day by day. I am looking for opportunities to grow in teams where I can learn and provide solutions.',
+        'project.hackathon.title': 'Participation in the Incibe 2025 Cybersecurity Hackathon',
+        'project.hackathon.desc': 'A project to promote the Cybersecurity industry in Spain.',
+        'project.abp.title': 'ABP Project',
+        'project.abp.desc': 'ABP Project 1st ASIR: Creation of a Cooperative.',
+        'project.par.title': 'PAR Project',
+        'project.par.desc': 'Creation of a network with 4 subnets for connection between buildings and floors',
+        'project.iso.title': 'ISO Project',
+        'project.iso.desc': 'Active Directory implementation and group policies in a Windows Server environment.',
+        'project.copilot.title': 'Programming assisted with Github Copilot',
+        'project.copilot.desc': 'Programming with AI assistance through Github Copilot.',
+        'project.intermodulos.title': 'Intermodules Project',
+        'project.intermodulos.desc': 'Project on research about REA',
+        'skill.html': 'HTML',
+        'skill.html.desc': 'Semantic structure, forms, accessible tags and best practices.',
+        'skill.css': 'CSS',
+        'skill.css.desc': 'Animations, variables and responsive.',
+        'skill.hardware': 'Equipment Assembly',
+        'skill.hardware.desc': 'Assembly and disassembly of equipment, maintenance and cleaning.',
+        'skill.ai': 'Applied AI',
+        'skill.ai.desc': 'Using AI to generate code, design ideas and optimize workflows.',
+        'skill.windows': 'Windows Server 2025',
+        'skill.windows.desc': 'Implementation of services in Windows Server 2025.',
+        'skill.microsoft': 'Microsoft 365',
+        'skill.microsoft.desc': 'Use of Office and Microsoft services.',
+        'skill.networks': 'Networks',
+        'skill.networks.desc': 'Network configuration, protocols, security and administration.',
+        'contact.message': 'Want to hire me? Let\'s talk!',
+        'form.name': 'Name',
+        'form.name.placeholder': 'Your full name',
+        'form.email': 'Email',
+        'form.email.placeholder': 'you@email.com',
+        'form.message': 'Message',
+        'form.message.placeholder': 'Tell me about your project or idea...',
+        'form.name.validation': 'Please enter at least 2 characters.',
+        'form.email.validation': 'Please enter a valid email address. Example: user@domain.com',
+        'form.message.validation': 'Please enter at least 10 characters.',
+        'form.required': 'This field is required.',
+        'form.send': 'Send message',
+        'footer': '© 2025 Sergio Vivó Pla',
+        'tag.html5': 'HTML5',
+        'tag.css3': 'CSS3',
+        'tag.ai': 'Applied AI',
+        'tag.hardware': 'Hardware',
+        'pill.cybersecurity': 'Cybersecurity',
+        'pill.hackathon': 'Hackathon',
+        'pill.network_scheme': 'Network Diagram',
+        'pill.database': 'Database',
+        'pill.webpage': 'Web Page',
+        'pill.networks': 'Networks',
+        'pill.cisco': 'Cisco Packet Tracer',
+        'pill.par': 'PAR',
+        'pill.windows_server': 'Windows Server',
+        'pill.active_directory': 'Active Directory',
+        'pill.ai_label': 'AI',
+        'pill.github': 'Github',
+        'pill.copilot': 'Copilot',
+        'pill.rea': 'REA',
+        'pill.research': 'Research',
+      }
+    };
+
+    let currentLang = localStorage.getItem('lang') || 'es';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('lang', lang);
+      document.documentElement.lang = lang;
+
+      // Update title
+      const titleEl = document.querySelector('[data-i18n-title]');
+      if (titleEl && translations[lang]['page.title']) {
+        document.title = translations[lang]['page.title'];
+      }
+
+      // Update nav items and all data-i18n elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+
+      // Update placeholders
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+        const key = el.getAttribute('data-i18n-placeholder');
+        if (translations[lang][key]) {
+          el.placeholder = translations[lang][key];
+        }
+      });
+
+      // Update titles (validation messages)
+      document.querySelectorAll('[data-i18n-title]').forEach(el => {
+        const key = el.getAttribute('data-i18n-title');
+        if (translations[lang][key]) {
+          el.title = translations[lang][key];
+        }
+      });
+
+      // Update lang button states
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('lang-btn-active');
+        if (btn.getAttribute('data-lang') === lang) {
+          btn.classList.add('lang-btn-active');
+        }
+      });
+      // Mostrar/ocultar bloques estáticos bilingües (sobre mí)
+      document.querySelectorAll('[data-i18n-static]').forEach(el => {
+        const key = el.getAttribute('data-i18n-static');
+        const elLang = el.getAttribute('data-lang') || 'es';
+        if (elLang === lang) {
+          if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+          }
+          el.style.display = 'block';
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    }
+
+    // Initialize language on page load
+    // Nota: setLanguage() actualiza texto, placeholders, títulos de validación
+    // y también muestra/oculta los bloques estáticos (`data-i18n-static`) del apartado "Sobre mí".
+    setLanguage(currentLang);
+
+    // Lang button click handlers
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        setLanguage(this.getAttribute('data-lang'));
+      });
+    });
+
+    // (removed) relleno estático duplicado — ahora se gestiona dentro de setLanguage()
+
+    // Form validation messages translation
+    const form = document.querySelector('.contacto-form');
+    if (form) {
+      // Intercepta la validación nativa para mostrar mensajes traducidos
+      form.addEventListener('invalid', (e) => {
+        if (e.target.hasAttribute('required') && !e.target.value) {
+          // `setCustomValidity` reemplaza el tooltip nativo con texto localizado
+          e.target.setCustomValidity(translations[currentLang]['form.required']);
+        }
+      }, true);
+
+      // Limpiar mensaje personalizado cuando el usuario modifica el campo
+      form.addEventListener('input', (e) => {
+        if (e.target.hasAttribute('required')) {
+          e.target.setCustomValidity('');
+        }
+      });
+    }
+
+    // Intersection Observer para animaciones de entrada
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Observar todos los elementos con animate-in
+    document.querySelectorAll('.animate-in').forEach(el => {
+      el.style.opacity = '0';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
